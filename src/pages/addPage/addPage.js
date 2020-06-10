@@ -4,6 +4,8 @@ import Nav from './../../components/organisms/nav'
 import Form from './../../components/organisms/form'
 import Footer from './../../components/molecules/footer'
 
+import './addPage.scss'
+
 const AddPage = ({places, setPlaces}) => {
 
 	const [add, setAdd] = useState({
@@ -37,8 +39,11 @@ const AddPage = ({places, setPlaces}) => {
 		}])
 	}
 	return (
-		<div>
+		<div className="addPage">
 			<Nav />
+			<h2>
+				Dodaj miejsce:
+			</h2>
 			<Form state={add} handleSubmit={handleSubmit} fields={addFields} submitValue="Dodaj"  />
 			<Footer />
 		</div>

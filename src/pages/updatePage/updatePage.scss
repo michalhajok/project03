@@ -1,0 +1,51 @@
+@import '../../base';
+
+.updatePage{
+
+    form{
+        padding: 3em;
+        margin: 10em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        table{
+            box-shadow: 0 0 0.3em 0.1em black;
+            border-radius: 1em;
+            padding: 4em;
+            background-color: #bdc3c7;
+
+            tr{
+                margin: 0.5em;
+                height: 2em;
+
+                td:nth-of-type(1){
+                    background-color: #2980b9;
+                    border-radius: 1em 0 0 1em;
+                    text-indent: 1em;
+                    margin: 1em;
+                }
+
+                input{
+                    height: 2.5em;
+                    border-radius: 0 1em 1em 0;
+                    text-indent: 0.5em;
+
+                }
+                select{
+                    height: 2.5em;
+                    width: 100%;
+                    border-radius: 0 1em 1em 0;
+                }
+                .btn-submit{
+                    background-color: #1abc9c;
+                    color: #2c3e50;
+                    border: 0;
+                    padding: 0 1.5em 0 1em;
+                }
+            }
+
+        }
+    }
+
+}

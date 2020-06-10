@@ -5,13 +5,12 @@ import PlaceList from './../../components/organisms/placeList'
 import FilterBar from './../../components/organisms/filterBar'
 import Footer from './../../components/molecules/footer'
 
-const HomePage = ({ places, category, setCategory }) => {
+const HomePage = ({ places, category, setCategory, filter, setFilter }) => {
 	return (
 		<div>
 			<Nav />
-			<FilterBar category={category} setCategory={setCategory} />
-			<PlaceList places={places} category={category} />
-			Home
+			<FilterBar filter={filter} setFilter={setFilter} />
+			<PlaceList places={places} filter={filter} category={category} />
 			<Footer />
 		</div>
 	)

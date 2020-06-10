@@ -1,0 +1,68 @@
+@import '../../base';
+
+.addPage{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    height: 100%;
+
+    nav{
+        grid-area: 1/1/2/4;
+    }
+
+    h2{
+        grid-area: 2/2/3/3;
+        justify-self: center;
+        font-size: 28px;
+    }
+
+    form{
+        margin: 5em;
+        place-self: center;
+        grid-area: 2/2/3/3;
+        justify-content: center;
+
+        table{
+            box-shadow: 0 0 0.3em 0.1em black;
+            border-radius: 1em;
+            padding: 4em;
+            background-color: #bdc3c7;
+
+            tr{
+                margin: 0.5em;
+                height: 2em;
+
+                td:nth-of-type(1){
+                    background-color: #f1c40f;
+                    color: #8e44ad;
+                    border-radius: 1em 0 0 1em;
+                    text-indent: 1em;
+                    margin: 1em;
+                }
+
+                input{
+                    height: 2.5em;
+                    border-radius: 0 1em 1em 0;
+                    text-indent: 0.5em;
+
+                }
+                select{
+                    height: 2.5em;
+                    width: 100%;
+                    border-radius: 0 1em 1em 0;
+                }
+                .btn-submit{
+                    background-color: #f39c12;
+                    color: #2c3e50;
+                    border: 0;
+                    padding: 0 1.5em 0 1em;
+                }
+            }
+
+        }
+    }
+
+    footer{
+        grid-area: 3/1/4/4;
+    }
+}

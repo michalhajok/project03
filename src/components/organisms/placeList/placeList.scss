@@ -1,0 +1,14 @@
+@import '../../../base';
+
+.placeList{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin: 0 0 5em 0;
+
+    .list{
+        grid-column: 2/3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

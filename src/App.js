@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from 'react';
 
 import { Router } from '@reach/router'
 
-import './App.css';
+import './App.scss';
 
 import AboutPage from './pages/aboutPage'
 import AddPage from './pages/addPage'
@@ -15,7 +15,13 @@ function App() {
 
   const [places, setPlaces] = useState([])
   const [category, setCategory] = useState('all')
+  const [filter, setFilter] = useState({
+    price:0,
+    category:"all",
+    name:""
 
+  })
+  
   useEffect(() => {
     fetch("/api/places")
     .then(response => response.json())
@@ -25,16 +31,14 @@ function App() {
   }, [places.id])
 
   return (
-    <div className="App">
-      <Router>
-        <HomePage path="/" places={places} category={category} setCategory={setCategory} />
+      <Router className="App">
+        <HomePage path="/" places={places} filter={filter} setFilter={setFilter} category={category} setCategory={setCategory} />
         <AboutPage path="/about" />
         <AddPage path="/place/add" places={places} setPlaces={setPlaces} />
         <PlacePage path="/place/:id" places={places} />
         <UpdatePage path="/place/:id/update" places={places} setPlaces={setPlaces} />
         <NotFoundPage default />
       </Router>
-    </div>
   );
 }
 

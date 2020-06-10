@@ -2,13 +2,15 @@ import React from 'react'
 
 import Paragraph from './../../atoms/paragraph'
 
+import './footer.scss'
+
 const Footer = () => {
 	return (
-		<div>
+		<footer>
 			<Paragraph>
 				&copy; 2020 Michał Hajok
 			</Paragraph>
-		</div>
+		</footer>
 	)
 }
 

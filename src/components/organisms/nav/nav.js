@@ -2,6 +2,8 @@ import React from 'react'
 
 import HyperLink from './../../atoms/link'
 
+import './nav.scss'
+
 const Nav = () => {
 	return (
 		<nav>

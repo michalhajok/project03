@@ -6,6 +6,8 @@ import Nav from './../../components/organisms/nav'
 import Form from './../../components/organisms/form'
 import Footer from './../../components/molecules/footer'
 
+import './updatePage.scss'
+
 const UpdatePage = ({places, setPlaces}) => {
 
 	const params = useParams()
@@ -26,7 +28,7 @@ const UpdatePage = ({places, setPlaces}) => {
 		setPlaces(arrays)
 	}
 	return (
-		<div>
+		<div className="updatePage">
 			<Nav />
 			<Form state={update} handleSubmit={handleSubmit} fields={updateFields} submitValue="Zaktualizuj" />
 			<Footer />

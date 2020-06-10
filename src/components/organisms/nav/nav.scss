@@ -1,0 +1,20 @@
+@import '../../../base';
+
+nav{
+    ul{
+        display: flex;
+        background-color: $secondColor;
+
+        li{
+            padding: 1.5em;
+
+            a{
+                padding: 2em;
+                color: $thirdColor;
+            }
+            :hover{
+                color: $fourthColor;
+            }
+        }
+    }
+}

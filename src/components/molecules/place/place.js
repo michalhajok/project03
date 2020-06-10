@@ -4,9 +4,11 @@ import HyperLink from './../../atoms/link'
 import Figure from './../../atoms/figure'
 import Paragraph from './../../atoms/paragraph'
 
+import './place.scss'
+
 const Place = ({place}) => {
 	return (
-		<div>
+		<div className="place">
 			<Figure place={place} />
 			<div>
 				<Paragraph>{place.title}</Paragraph>
