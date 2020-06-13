@@ -1,4 +1,31 @@
+@import '../../base';
+
 .aboutPage{
+    height: 100%;
+
+    .about{
+        color: $secondColor;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+
+        h2{
+            font-size: 24px;
+            grid-area: 1/2/2/3;
+            align-self: end;
+            justify-self: center;
+            margin-bottom: 1em;
+        }
+
+        div{
+            text-align: center;
+            line-height: 120%;
+            font-size: 18px;
+            grid-area: 2/2/3/3; 
+        }
+    }
+
     footer{
         position: fixed;
         bottom: 0;

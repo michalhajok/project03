@@ -16,7 +16,7 @@ function App() {
   const [places, setPlaces] = useState([])
   const [category, setCategory] = useState('all')
   const [filter, setFilter] = useState({
-    price:0,
+    city:"",
     category:"all",
     name:""
 
@@ -32,11 +32,11 @@ function App() {
 
   return (
       <Router className="App">
-        <HomePage path="/" places={places} filter={filter} setFilter={setFilter} category={category} setCategory={setCategory} />
-        <AboutPage path="/about" />
-        <AddPage path="/place/add" places={places} setPlaces={setPlaces} />
-        <PlacePage path="/place/:id" places={places} />
-        <UpdatePage path="/place/:id/update" places={places} setPlaces={setPlaces} />
+        <HomePage path="/project03/" places={places} filter={filter} setFilter={setFilter} category={category} setCategory={setCategory} />
+        <AboutPage path="/project03/about" />
+        <AddPage path="/project03/place/add" places={places} setPlaces={setPlaces} />
+        <PlacePage path="/project03/place/:id" places={places} />
+        <UpdatePage path="/project03/place/:id/update" places={places} setPlaces={setPlaces} />
         <NotFoundPage default />
       </Router>
   );

@@ -11,11 +11,11 @@ const PlaceList = ({ places, filter }) => {
 			<div className="list">
 				{
 				filter.category === "all"?
-				places.map(place=>(
+				places.filter( place => place.title.toLowerCase().includes(filter.name.toLowerCase()) && place.city.toLowerCase().includes(filter.city.toLowerCase())).map(place=>(
 					<Place key={"place "+ place.id} place={place} />
 				))
 				:
-				places.filter(place => place.category === filter.category ).map(
+				places.filter(place => place.category === filter.category && place.title.toLowerCase().includes(filter.name.toLowerCase()) && place.city.toLowerCase().includes(filter.city.toLowerCase())).map(
 					filteredPlace =>(
 						<Place key={"place "+ filteredPlace.id} place={filteredPlace}/>
 					)

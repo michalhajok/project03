@@ -12,7 +12,7 @@ const Place = ({place}) => {
 			<Figure place={place} />
 			<div>
 				<Paragraph>{place.title}</Paragraph>
-				<HyperLink to={"/place/"+place.id}>zobacz więcej</HyperLink>
+				<HyperLink to={"/project03/place/"+place.id}>zobacz więcej</HyperLink>
 			</div>
 		</div>
 	)

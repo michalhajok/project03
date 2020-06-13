@@ -23,7 +23,7 @@ const PlacePage = ({places}) => {
 					<div>
 						<h2>{places[id].title}</h2>
 						<p>{places[id].price}zł</p>
-						<HyperLink to={"/place/"+id+"/update"}>Zaktualizuj</HyperLink>
+						<HyperLink to={"/project03/place/"+id+"/update"}>Zaktualizuj</HyperLink>
 					</div>
 					<div>
 						<p>{places[id].city}</p>
