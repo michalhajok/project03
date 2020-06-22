@@ -7,12 +7,15 @@ import Paragraph from './../../atoms/paragraph'
 import './place.scss'
 
 const Place = ({place}) => {
+
+	const { foto_url, title, id} = place
+
 	return (
 		<div className="place">
-			<Figure place={place} />
+			<Figure fotoUrl={foto_url} />
 			<div>
-				<Paragraph>{place.title}</Paragraph>
-				<HyperLink to={"/project03/place/"+place.id}>zobacz więcej</HyperLink>
+				<Paragraph>{title}</Paragraph>
+				<HyperLink to={`/project03/place/${id}`}>zobacz więcej</HyperLink>
 			</div>
 		</div>
 	)

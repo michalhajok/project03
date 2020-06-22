@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React,{ useState, useEffect, useCallback } from 'react';
 
 import { Router } from '@reach/router'
 
@@ -22,13 +22,22 @@ function App() {
 
   })
   
+  const fetchApi = useCallback(
+    async () => {
+      try {
+        const response = await fetch("/api/places")
+        const data = await response.json()
+        setPlaces(data.places)
+      } catch (error) {
+        
+      }
+    },
+    [],
+  )
+
   useEffect(() => {
-    fetch("/api/places")
-    .then(response => response.json())
-    .then(data=>{
-      setPlaces(data.places)
-    })
-  }, [places.id])
+    fetchApi()
+  }, [fetchApi])
 
   return (
       <Router className="App">

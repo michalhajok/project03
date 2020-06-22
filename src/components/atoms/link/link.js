@@ -4,9 +4,9 @@ import { Link } from '@reach/router'
 
 
 
-const HyperLink = (props) => {
+const HyperLink = ({to, children}) => {
 	return (
-		<Link to={props.to}>{props.children}</Link>
+		<Link to={to}>{children}</Link>
 	)
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Figure = ({place}) => {
+const Figure = ({ fotoUrl }) => {
 	return (
 		<figure>
-			<img src={place.foto_url} alt="error" />
+			<img src={fotoUrl} alt="error" />
 		</figure>
 	)
 }

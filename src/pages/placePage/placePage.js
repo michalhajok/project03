@@ -12,26 +12,27 @@ import './placePage.scss'
 const PlacePage = ({places}) => {
 
 	const params = useParams()
-	const id = params.id
+	const { id } = params
+	const { title, price, foto_url, city, address, description } = places[id]
 
 	return (
 		<div className="placePage">
 			<Nav />
 			<div className="content">
-				<Figure place={places[id]} />
+				<Figure fotoUrl={foto_url} />
 				<div className="info">
 					<div>
-						<h2>{places[id].title}</h2>
-						<p>{places[id].price}zł</p>
-						<HyperLink to={"/project03/place/"+id+"/update"}>Zaktualizuj</HyperLink>
+						<h2>{title}</h2>
+						<p>{price}zł</p>
+						<HyperLink to={`/project03/place/${id}/update`}>Zaktualizuj</HyperLink>
 					</div>
 					<div>
-						<p>{places[id].city}</p>
-						<p>{places[id].address}</p>
+						<p>{city}</p>
+						<p>{address}</p>
 					</div>
 					<div>
 						<p>
-							{places[id].description}
+							{description}
 						</p>
 					</div>
 				</div>

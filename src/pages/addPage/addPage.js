@@ -19,6 +19,8 @@ const AddPage = ({places, setPlaces}) => {
 		category: ""
 	})
 
+	const { title, description, foto_url, price, city, address, category} = add
+
 	const addFields = (e) =>{
 		setAdd({
 			...add,
@@ -29,13 +31,13 @@ const AddPage = ({places, setPlaces}) => {
 		e.preventDefault()
 		setPlaces([...places, {
 			id:places.length,
-			title: add.title,
-			description: add.description,
-			foto_url: add.foto_url,
-			price: add.price,
-			city: add.city,
-			address: add.address,
-			category: add.category
+			title: title,
+			description: description,
+			foto_url: foto_url,
+			price: price,
+			city: city,
+			address: address,
+			category: category
 		}])
 	}
 	return (
